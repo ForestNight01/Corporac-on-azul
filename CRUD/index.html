@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/Estilos.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>CRUD</title>
+</head>
+<body>
+
+   
+    
+<!--ingreso -->
+<div class="container Ingreso">
+  <h1>Ingreso</h1>
+    <form  id="ingreso" method="post">
+        <div class="row">
+            <div class="row">
+                <div class="col">
+                <label for="">Nombre</label>
+                <br>
+                <input type="text" name="nombre">
+                </div>
+            </div>
+            
+      
+      <div class="row">
+        <div class="col ">
+            <label  >Unidad de Medida </label><br>
+                <select name="medida" class="form-select select Unidad">
+                    <option>Kilogramo (kg)</option>
+                    <option>Gramo (g)</option>
+                    <option>Miligramo (mg)</option>
+                    <option>Libra (lb)</option>
+</select>
+        </div>
+      </div>      
+      
+      <div class="row">
+        <div class="col">
+             <label for="">Precio</label><br>
+                <input name="precio" type="text">
+        </div>
+      </div>     
+      
+      <div class="row">
+        <div class="col">
+            <label for="">Stock</label><br>
+                <input name="stock" type="number">
+        </div>
+      </div>            
+      <div class="row">
+        <div class="col">
+            <label for="">Total Por Pducto</label><br>
+                <input name="total" type="text">
+        </div>
+      </div>    
+      <div class="row">
+        <div class="col">
+            <br>
+            <input type="submit" id="enviar"  value="Aceptar">
+        
+        </div>
+      </div> 
+
+        </div>
+
+        <div id="respuesta"></div>
+    </form>
+</div>
+
+<br>
+
+
+
+<!--listado de mercancia-->
+<div class="container">
+ <div class="row">
+  <div class="col">
+     <input type="text" id="busqueda" placeholder="Escribe el nombre del material"> <br>
+<button id="btnBuscar">Buscar</button>
+  </div>
+ </div>
+  <h1>Listado de Materiales</h1>
+  <table border="1" cellpadding="8" cellspacing="0" id="tablaMateriales">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Unidad</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Aquí se cargarán los datos -->
+    </tbody>
+</table>
+
+
+  </div>
+<br>
+ 
+<!--Modificar material-->
+<div class="container Ingreso">
+  <h1>Ingreso</h1>
+    <form  id="modificar" method="post">
+
+      <div class="row">
+        <div class="col">
+          <label for="">Nombre del producto a modificar</label>
+          <input type="text" name="producto">
+        </div>
+      </div>
+        <div class="row">
+            <div class="row">
+                <div class="col">
+                <label for="">Nombre</label>
+                <br>
+                <input type="text" name="nombre">
+                </div>
+            </div>
+            
+      
+      <div class="row">
+        <div class="col ">
+            <label  >Unidad de Medida </label><br>
+                <select name="medida" class="form-select select Unidad">
+                    <option>Kilogramo (kg)</option>
+                    <option>Gramo (g)</option>
+                    <option>Miligramo (mg)</option>
+                    <option>Libra (lb)</option>
+</select>
+        </div>
+      </div>      
+      
+      <div class="row">
+        <div class="col">
+             <label for="">Precio</label><br>
+                <input name="precio" type="text">
+        </div>
+      </div>     
+      
+      <div class="row">
+        <div class="col">
+            <label for="">Stock</label><br>
+                <input name="stock" type="number">
+        </div>
+      </div>            
+      <div class="row">
+        <div class="col">
+            <label for="">Total Por Pducto</label><br>
+                <input name="total" type="text">
+        </div>
+      </div>    
+      <div class="row">
+        <div class="col">
+            <br>
+            <input type="submit" id="enviar"  value="Aceptar">
+        
+        </div>
+      </div> 
+
+        </div>
+
+        <div id="respuesta"></div>
+    </form>
+</div>
+
+
+
+
+
+<!---Eliminar Material-->
+<br>
+<div class="container">
+  <h1>Eliminar Material</h1>
+    <div class="row">
+        <div class="col">
+              <form id="eliminar" action="post">
+                <label for="">Nombre del producto a eliminar</label>
+                <input type="text" name="producto"><br>
+                <input type="submit" id="enviar"  value="Aceptar">
+                <div id="respuesta"></div>
+
+              </form>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+    <script src="./js/Metodos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
